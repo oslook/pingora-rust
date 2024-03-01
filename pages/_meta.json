@@ -1,0 +1,22 @@
+{
+    "index": {
+        "title": "Home",
+        "type": "page"
+    },
+    "quick_start": {
+        "title": "Quick Start",
+        "type": "page"
+    },
+    "user_guide": {
+        "title": "User Guide",
+        "type": "page"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "type": "page"
+    },
+    "about": {
+        "title": "About Us",
+        "type": "page"
+    }
+}

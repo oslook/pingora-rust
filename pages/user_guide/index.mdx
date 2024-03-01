@@ -1,0 +1,31 @@
+# User Guide
+
+In this guide, we will cover the most used features, operations and settings of Pingora.
+
+## Running Pingora servers
+* [Start and stop](user_guide/start_stop.md)
+* [Graceful restart and graceful shutdown](user_guide/graceful.md)
+* [Configuration](user_guide/conf.md)
+* [Daemonization](user_guide/daemon.md)
+* [Systemd integration](user_guide/systemd.md)
+* [Handling panics](user_guide/panic.md)
+* [Error logging](user_guide/error_log.md)
+* [Prometheus](user_guide/prom.md)
+
+## Building HTTP proxies
+* [Life of a request: `pingora-proxy` phases and filters](user_guide/phase.md)
+* [`Peer`: how to connect to upstream](user_guide/peer.md)
+* [Sharing state across phases with `CTX`](user_guide/ctx.md)
+* [How to return errors](user_guide/errors.md)
+* [Examples: take control of the request](user_guide/modify_filter.md)
+* [Connection pooling and reuse](user_guide/pooling.md)
+* [Handling failures and failover](user_guide/failover.md)
+
+## Advanced topics (WIP)
+* [Pingora internals](user_guide/internals.md)
+* Using BoringSSL
+* User defined configuration
+* Pingora async runtime and threading model
+* Background Service
+* Blocking code in async context
+* Tracing
