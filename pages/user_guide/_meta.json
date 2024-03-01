@@ -3,7 +3,6 @@
         "title": "User Guide",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -15,7 +14,6 @@
         "title": "Start and stop",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -23,7 +21,6 @@
         "title": "Graceful shutdown",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -31,7 +28,6 @@
         "title": "Configuration",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -39,7 +35,6 @@
         "title": "Daemonization",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -47,7 +42,6 @@
         "title": "Systemd integration",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -55,7 +49,6 @@
         "title": "Handling panics",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -63,7 +56,6 @@
         "title": "Error logging",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -71,7 +63,6 @@
         "title": "Prometheus",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -83,7 +74,6 @@
         "title": "`pingora-proxy` phases and filters",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -91,7 +81,6 @@
         "title": "how to connect to upstream",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -99,7 +88,6 @@
         "title": "Sharing state across phases with `CTX`",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -107,7 +95,6 @@
         "title": "How to return errors?",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -115,7 +102,6 @@
         "title": "Examples: take control of the request",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -123,7 +109,6 @@
         "title": "Connection pooling and reuse",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -131,7 +116,6 @@
         "title": "Handling failures and failover}",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
@@ -143,7 +127,6 @@
         "title": "Pingora internals",
         "theme": {
             "pagination": false,
-            "layout": "full",
             "toc": false
         }
     },
