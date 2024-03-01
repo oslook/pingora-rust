@@ -146,5 +146,8 @@
             "layout": "full",
             "toc": false
         }
+    },
+    "phase_chart": {
+        "display": "hidden"
     }
 }

@@ -5,7 +5,7 @@ The pingora-proxy HTTP proxy framework supports highly programmable proxy behavi
 
 ## Life of a proxied HTTP request
 1. The life of a proxied HTTP request starts when the proxy reads the request header from the **downstream** (i.e., the client).
-2. Then, the proxy connects to the **upstream** (i.e., the remote server). This step is skipped if there is a previously established [connection to reuse](user_guide/pooling.md).
+2. Then, the proxy connects to the **upstream** (i.e., the remote server). This step is skipped if there is a previously established [connection to reuse](/pooling.md).
 3. The proxy then sends the request header to the upstream.
 4. Once the request header is sent, the proxy enters a duplex mode, which simultaneously proxies:
     a. upstream response (both header and body) to the downstream, and
@@ -45,7 +45,7 @@ Pingora-proxy allows users to insert arbitrary logic into the life of a request.
 ```
 
 ### General filter usage guidelines
-* Most filters return a [`pingora_error::Result<_>`](user_guide/errors.md). When the returned value is `Result::Err`, `fail_to_proxy()` will be called and the request will be terminated.
+* Most filters return a [`pingora_error::Result<_>`](/errors.md). When the returned value is `Result::Err`, `fail_to_proxy()` will be called and the request will be terminated.
 * Most filters are async functions, which allows other async operations such as IO to be performed within the filters.
 * A per-request `CTX` object can be defined to share states across the filters of the same request. All filters have mutable access to this object.
 * Most filters are optional.
