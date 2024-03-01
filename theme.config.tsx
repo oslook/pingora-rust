@@ -13,19 +13,11 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <span>
-        <a href="/terms" target="_blank">
-          Terms of Service
-        </a>
-        {' '} | {' '}
-        <a href="/privacy" target="_blank">
-        Privacy Policy
-        </a>
+        "Pingora" is the product name of Cloudflare and is not owned by this website.
         {' '} | Copyright {new Date().getFullYear()} ©{' '}
         <a href="/" target="_blank">
           PingoraRust.COM
         </a>
-        .{' '}All Rights Reserved.
-        
       </span>
     ),
   },

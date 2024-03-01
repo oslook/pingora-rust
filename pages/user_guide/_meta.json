@@ -1,31 +1,150 @@
 {
-    "index": "User Guide",
-    "---": {
+    "index": {
+        "title": "User Guide",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "--- runing": {
         "title": "Running Pingora servers",
         "type": "separator"
     },
-    "start_stop": "Start and stop",
-    "graceful": "Graceful shutdown",
-    "conf": "Configuration",
-    "daemon": "Daemonization",
-    "systemd": "Systemd integration",
-    "panic": "Handling panics",
-    "error_log": "Error logging",
-    "prom": "Prometheus",
+    "start_stop": {
+        "title": "Start and stop",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "graceful": {
+        "title": "Graceful shutdown",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "conf": {
+        "title": "Configuration",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "daemon": {
+        "title": "Daemonization",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "systemd": {
+        "title": "Systemd integration",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "panic": {
+        "title": "Handling panics",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "error_log": {
+        "title": "Error logging",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "prom": {
+        "title": "Prometheus",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
     "----": {
         "title": "Building HTTP proxies",
         "type": "separator"
     },
-    "phase": "`pingora-proxy` phases and filters",
-    "peer": "how to connect to upstream",
-    "ctx": "Sharing state across phases with `CTX`",
-    "errors": "How to return errors?",
-    "modify_filter": "Examples: take control of the request",
-    "pooling": "Connection pooling and reuse",
-    "failover": "Handling failures and failover",
+    "phase": {
+        "title": "`pingora-proxy` phases and filters",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "peer": {
+        "title": "how to connect to upstream",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "ctx": {
+        "title": "Sharing state across phases with `CTX`",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "errors": {
+        "title": "How to return errors?",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "modify_filter": {
+        "title": "Examples: take control of the request",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "pooling": {
+        "title": "Connection pooling and reuse",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
+    "failover": {
+        "title": "Handling failures and failover}",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    },
     "-----": {
         "title": "Advanced",
         "type": "separator"
     },
-    "internals": "Pingora internals"
+    "internals": {
+        "title": "Pingora internals",
+        "theme": {
+            "pagination": false,
+            "layout": "full",
+            "toc": false
+        }
+    }
 }
