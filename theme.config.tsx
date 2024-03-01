@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span style={{ marginLeft: '.4em', fontSize: '1.5em', fontWeight: 500 }}>Pingora Rust</span>,
+  logo: <span style={{ marginLeft: '.4em', fontSize: '1.5em', fontWeight: 500 }}>Pingora</span>,
   project: {
     link: 'https://github.com/cloudflare/pingora'
   },
@@ -81,7 +81,7 @@ const config: DocsThemeConfig = {
       if (title === 'About') {
         return <>❓ {title}</>
       }
-      return <>👉 {title}</>
+      return <>{title}</>
     }
   },
   feedback: {

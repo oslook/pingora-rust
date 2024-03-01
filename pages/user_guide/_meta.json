@@ -1,5 +1,31 @@
 {
     "index": "User Guide",
-    "ctx": "CTX",
-    "conf": "Configuration"
-  }
+    "---": {
+        "title": "Running Pingora servers",
+        "type": "separator"
+    },
+    "start_stop": "Start and stop",
+    "graceful": "Graceful shutdown",
+    "conf": "Configuration",
+    "daemon": "Daemonization",
+    "systemd": "Systemd integration",
+    "panic": "Handling panics",
+    "error_log": "Error logging",
+    "prom": "Prometheus",
+    "----": {
+        "title": "Building HTTP proxies",
+        "type": "separator"
+    },
+    "phase": "`pingora-proxy` phases and filters",
+    "peer": "how to connect to upstream",
+    "ctx": "Sharing state across phases with `CTX`",
+    "errors": "How to return errors?",
+    "modify_filter": "Examples: take control of the request",
+    "pooling": "Connection pooling and reuse",
+    "failover": "Handling failures and failover",
+    "-----": {
+        "title": "Advanced",
+        "type": "separator"
+    },
+    "internals": "Pingora internals"
+}
