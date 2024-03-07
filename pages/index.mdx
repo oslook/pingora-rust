@@ -20,3 +20,19 @@ Pingora is battle tested as it has been serving more than 40 million Internet re
 * **Security** is your top priority: Pingora is a more memory safe alternative for services that are written in C/C++.
 * Your service is **performance-sensitive**: Pingora is fast and efficient.
 * Your service requires extensive **customization**: The APIs Pingora proxy framework provides are highly programmable.
+
+# System requirements
+
+## Systems
+Linux is our tier 1 environment and main focus.
+
+We will try our best for most code to compile for Unix environments. This is for developers and users to have an easier time developing with Pingora in Unix-like environments like macOS (though some features might be missing)
+
+Both x86_64 and aarch64 architectures will be supported.
+
+## Rust version
+
+Pingora keeps a rolling MSRV (minimum supported Rust version) policy of 6 months. This means we will accept PRs that upgrade the MSRV as long as the new Rust version used is at least 6 months old.
+
+Our current MSRV is 1.72.
+
