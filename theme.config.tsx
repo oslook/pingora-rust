@@ -43,7 +43,7 @@ const config: DocsThemeConfig = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           property="description"
-          content={frontMatter.description || 'Pingora Rust'}
+          content={frontMatter.description || 'Pingora Rust (NGINX replacement)'}
         />
         <meta property="og:url" content={url} />
         <meta property="og:title" content={frontMatter.title || 'pingorarust.com'} />
@@ -53,11 +53,11 @@ const config: DocsThemeConfig = {
         <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
           property="twitter:description"
-          content={frontMatter.description || '....'}
+          content={frontMatter.description || 'The Study Website of Cloudflare Open sources Pingora (NGINX replacement)'}
         />
         <meta
           property="og:description"
-          content={frontMatter.description || '......'}
+          content={frontMatter.description || 'The Study Website of Cloudflare Open sources Pingora (NGINX replacement)'}
         />
       </>
     )
