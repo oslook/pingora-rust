@@ -16,7 +16,8 @@ The pingora-proxy HTTP proxy framework supports highly programmable proxy behavi
 Pingora-proxy allows users to insert arbitrary logic into the life of a request.
 ```mermaid
  graph TD;
-    start("new request")-->request_filter;
+    start("new request")-->early_request_filter;
+    early_request_filter-->request_filter;
     request_filter-->upstream_peer;
 
     upstream_peer-->Connect{{IO: connect to upstream}};
@@ -25,7 +26,8 @@ Pingora-proxy allows users to insert arbitrary logic into the life of a request.
     Connect--connection failure-->fail_to_connect;
 
     connected_to_upstream-->upstream_request_filter;
-    upstream_request_filter --> SendReq{{IO: send request to upstream}};
+    upstream_request_filter --> request_body_filter;
+    request_body_filter --> SendReq{{IO: send request to upstream}};
     SendReq-->RecvResp{{IO: read response from upstream}};
     RecvResp-->upstream_response_filter-->response_filter-->upstream_response_body_filter-->response_body_filter-->logging-->endreq("request done");
 
@@ -52,10 +54,16 @@ Pingora-proxy allows users to insert arbitrary logic into the life of a request.
 * The reason both `upstream_response_*_filter()` and `response_*_filter()` exist is for HTTP caching integration reasons (still WIP).
 
 
-### `request_filter()`
+### `early_request_filter()`
 This is the first phase of every request.
 
+This function is similar to `request_filter()` but executes before any other logic, including downstream module logic. The main purpose of this function is to provide finer-grained control of the behavior of the modules.
+
+### `request_filter()`
 This phase is usually for validating request inputs, rate limiting, and initializing context.
+
+### `request_body_filter()`
+This phase is triggered after a response body is ready to send to upstream. It will be called every time a piece of request body is received.
 
 ### `proxy_upstream_filter()`
 This phase determines if we should continue to the upstream to serve a response. If we short-circuit, a 502 is returned by default, but a different response can be implemented.
@@ -84,10 +92,10 @@ If the error is not retry-able, the request will end.
 ### `upstream_request_filter()`
 This phase is to modify requests before sending to upstream.
 
-### `upstream_response_filter()/upstream_response_body_filter()`
-This phase is triggered after an upstream response header/body is received.
+### `upstream_response_filter()/upstream_response_body_filter()/upstream_response_trailer_filter()`
+This phase is triggered after an upstream response header/body/trailer is received.
 
-This phase is to modify or process response headers (or body) before sending to downstream. Note that this phase is called _prior_ to HTTP caching and therefore any changes made here will affect the response stored in the HTTP cache.
+This phase is to modify or process response headers, body, or trailers before sending to downstream. Note that this phase is called _prior_ to HTTP caching and therefore any changes made here will affect the response stored in the HTTP cache.
 
 ### `response_filter()/response_body_filter()/response_trailer_filter()`
 This phase is triggered after a response header/body/trailer is ready to send to downstream.

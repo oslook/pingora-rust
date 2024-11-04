@@ -59,6 +59,13 @@
             "toc": false
         }
     },
+    "rate_limiter": {
+        "title": "Rate limiter",
+        "theme": {
+            "pagination": false,
+            "toc": false
+        }
+    },
     "prom": {
         "title": "Prometheus",
         "theme": {
@@ -131,6 +138,10 @@
         }
     },
     "phase_chart": {
-        "display": "hidden"
+        "display": "hidden",
+        "theme": {
+            "pagination": false,
+            "toc": false
+        }
     }
 }

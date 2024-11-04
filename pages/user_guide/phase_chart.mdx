@@ -1,7 +1,8 @@
 Pingora proxy phases without caching
 ```mermaid
  graph TD;
-    start("new request")-->request_filter;
+    start("new request")-->early_request_filter;
+    early_request_filter-->request_filter;
     request_filter-->upstream_peer;
 
     upstream_peer-->Connect{{IO: connect to upstream}};
@@ -10,7 +11,8 @@ Pingora proxy phases without caching
     Connect--connection failure-->fail_to_connect;
 
     connected_to_upstream-->upstream_request_filter;
-    upstream_request_filter --> SendReq{{IO: send request to upstream}};
+    upstream_request_filter --> request_body_filter;
+    request_body_filter --> SendReq{{IO: send request to upstream}};
     SendReq-->RecvResp{{IO: read response from upstream}};
     RecvResp-->upstream_response_filter-->response_filter-->upstream_response_body_filter-->response_body_filter-->logging-->endreq("request done");
 
