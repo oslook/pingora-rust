@@ -120,7 +120,7 @@
         }
     },
     "failover": {
-        "title": "Handling failures and failover}",
+        "title": "Handling failures and failover",
         "theme": {
             "pagination": false,
             "toc": false
